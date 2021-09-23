@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
+<script>
+    let char = prompt('Nhập ký tự');
 
+    function check(a) {
+        let flag = false
+        let count = 0;
+        let arr = ['dog', 'cat', 'tree'];
+        for (let i = 0; i < arr.length; i++) {
+            if (a === arr[i]) {
+                count++;
+                flag = true
+                return count
+            }
+            if (a !== arr[i]) {
+                flag = false
+                return -1
+            }
+        }
+    }
+    alert(check(char))
+</script>
 </body>
 </html>

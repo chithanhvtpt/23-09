@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="oinput">
+<button onclick="star">tìm</button>
+<p id="dulieu"></p>
+<script>
+    let a = document.getElementById('oinput').value
+    let check = false
+    function star(stars, constell) {
+        stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        constell = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        for (let i = 0; i < stars.length; i++) {
+                if (a === stars[i]) {
+                    document.getElementById('dulieu').innerHTML = constell[i];
+                    check = true
+                }
+        }
+        if (check) {
+            document.getElementById('dulieu').innerHTML ='No result'
+        }
+    }
+</script>
 </body>
 </html>
